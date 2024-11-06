@@ -22,7 +22,6 @@ public class TimeZoneConverter {
         ZonedDateTime startTime;
         ZonedDateTime endTime;
         ZoneId targetTimeZone;
-
         public ScheduledEvent(String eventName, String startTime, String startTimeZone, String endTime, String endTimeZone, String targetTimeZone) {
             if (eventName == null || startTime == null || endTime == null || startTimeZone == null || endTimeZone == null || targetTimeZone == null) {
                 throw new IllegalArgumentException("Event name, start time, end time, time zones must not be null");
