@@ -21,4 +21,4 @@ jobs:
       - name: Build and run
         run: |
           mvn clean package
-          java -jar target/timezone-converter.jar input.json
+          java -jar target/TimeZoneScheduling-1.0-SNAPSHOT.jar input.json
