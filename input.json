@@ -11,7 +11,7 @@
     "eventName": "Event 2",
     "startTime": "2022-06-01T10:00:00-04:00",
     "startTimeZone": "America/New_York",
-    "endTime": "2022-06-01T12:00:00-04:00",
+    "endTime": "2022-04-01T12:00:00-04:00",
     "endTimeZone": "America/New_York",
     "targetTimeZone": "Europe/London"
   },
