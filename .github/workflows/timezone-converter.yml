@@ -1,25 +1,27 @@
-name: Validate Time Zone Conversions
+name: Timezone Converter
 
 on:
   push:
     paths:
       - input.json
-      - src/main/java/TimeZoneConverter.java
+      - src/main/java/**/*
 
 jobs:
-  validate:
+  build-and-run:
     runs-on: ubuntu-latest
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Compile and run Java code
-        run: |
-          javac src/main/java/TimeZoneConverter.java
-          java -DoutputFile=output.log src/main/java/TimeZoneConverter input.json output.log
-
-      - name: Upload output log file
-        uses: actions/upload-artifact@v2
+      - name: Set up Java
+        uses: actions/setup-java@v2
         with:
-          name: output.log
-          path: output.log
+          java-version: '11'
+
+      - name: Build and run
+        run: |
+          mvn clean package -DskipTests
+          java -jar target/TimeZoneScheduling-1.0-SNAPSHOT.jar input.json
+          
