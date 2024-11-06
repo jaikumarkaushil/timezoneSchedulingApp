@@ -22,6 +22,6 @@ jobs:
 
       - name: Build and run
         run: |
-          mvn clean package -DskipTests
+          mvn clean package
           java -jar target/TimeZoneScheduling-1.0-SNAPSHOT.jar input.json
           
