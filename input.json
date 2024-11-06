@@ -23,4 +23,13 @@
     "endTimeZone": "UTC",
     "targetTimeZone": "Australia/Sydney"
   }
+,
+  {
+    "eventName": "Event 4",
+    "startTime": "2022-11-31T23:00:00+00:00",
+    "startTimeZone": "UTC",
+    "endTime": "2023-03-11T01:00:00+00:00",
+    "endTimeZone": "UTC",
+    "targetTimeZone": "Australia/Sydney"
+  }
 ]
